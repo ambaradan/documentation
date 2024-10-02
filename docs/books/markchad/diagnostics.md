@@ -10,7 +10,7 @@ tags:
   - markdown
 ---
 
-## Introduzione
+## Introduction
 
 > Clean code is a term used to describe computer code that is easy to read, understand, and maintain.
 
