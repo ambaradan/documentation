@@ -80,6 +80,45 @@ Specifically, the configuration can be installed following two distinct schemes:
 1. As the main editor - this solution allows Markchad to be used with the standard Neovim command (nvim) and a possible launcher for the Gnome desktop, however, in this case all configuration files and shared data are removed, consequently it is recommended to back up the configuration before proceeding with the installation
 2. As a secondary editor - in this case the Markchad configuration is installed separately and the whole process runs using the `markchad` folder as a reference. The *markchad* folder is used for configurations in `.config` and for shared data in `.local/share`, this allows you to continue using the basic version of Neovim for the other programming languages you are working on and Markchad for Markdown documents only.
 
+### Download the script
+
+The installation script is available at the following address:
+
+```bash
+curl -L https://github.com/ambaradan/markchad/releases/latest/download/install_markchad.tar.gz
+```
+
+Also download the checksum file (sha256):
+
+```bash
+curl -L https://github.com/ambaradan/markchad/releases/latest/download/install_markchad.tar.gz.sha256
+```
+
+Verify the integrity of the archive with:
+
+```bash
+sha256sum -c install_markchad.tar.gz.sha256 
+install_markchad.tar.gz: OK
+```
+
+If everything is correct extract the archive and start the script with:
+
+```bash
+tar -xf install_markchad.tar,gz
+cd install_markchad
+./install.sh
+```
+
+The following screen will open from which you will carry out all the necessary operations to install the configuration:
+
+![Install intro](./images/install_intro.png)
+
+Start with option 1 to verify that your system meets the requirements, the missing commands can be installed on a Rocky Linux system by following the suggestions displayed in the screen, for other linux systems they should be adjusted according to the package manager in use.
+
+Once the requirements have been met, go to option 2 and make a backup copy of the *nvim* configuration; if Neovim has only been used in its basic version, no personal configuration will be present and this step can be skipped.
+
+Then go on to install the configuration according to the scheme chosen from the two described above, the script at this point will take care of downloading the latest version of the release and checking its integrity, unzip the archive and copy the files to the desired location, at the end it will present a screen with the manual actions needed to finish it.
+
 ## :material-update: Configuration update
 
 In progress
