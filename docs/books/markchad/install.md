@@ -121,7 +121,10 @@ Then go on to install the configuration according to the scheme chosen from the 
 
 ## :material-update: Configuration update
 
-In progress
+Updating the Markchad configuration consists of replacing, and subsequently deleting, the existing copy. It is therefore recommended to make a backup copy before proceeding with the upgrade.  
+Deleting the configuration is necessary to ensure that the new installation runs properly, especially for the shared plugin data in the `.loca/share` folder.
+
+To perform the upgrade, simply repeat the installation procedure provided by the installation script as described above; the script will detect the previous installation and take care of deleting it before proceeding with the new installation.
 
 ## :material-contain-end: Conclusions
 
